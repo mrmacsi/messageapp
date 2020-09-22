@@ -9,27 +9,27 @@
                 
                 <div class="mt-2">
                     <label class="block text-sm text-gray-600" for="subject">Subject</label>
-                    <p>Subject</p>
+                    <p>{{ $message->subject }}</p>
                 </div>
                 
                 <div class="mt-2">
                     <label class="block text-sm text-gray-600" for="content">Content</label>
-                    <p>Content</p>
+                    <p>{{ $message->body }}</p>
                 </div>
 
                 <div class="mt-2">
                     <label class="block text-sm text-gray-600" for="content">Sent Date</label>
-                    <p>Sent Date</p>
+                    <p>{{ $message->sentDate }}</p>
                 </div>
 
                 <div class="mt-2">
                     <label class="block text-sm text-gray-600" for="content">Read Date</label>
-                    <p>Read Date</p>
+                    <p>{{ $message->readDate }}</p>
                 </div>
 
                 <div class="mt-2">
                     <label class="block text-sm text-gray-600" for="content">Archived Date</label>
-                    <p>Archived Date</p>
+                    <p>{{ $message->archivedDate }}</p>
                 </div>
 
                 <div class="mt-4 text-right">

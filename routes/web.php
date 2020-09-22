@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MessageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,14 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('list');
-});
 
-Route::get('/create-new', function () {
-    return view('create');
-});
-
-Route::get('/view', function () {
-    return view('view');
-});
+Route::get('create-new', [MessageController::class, 'create']);
+Route::get('/', [MessageController::class, 'list']);
+Route::get('view/{id}', [MessageController::class, 'view']);

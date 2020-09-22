@@ -15,30 +15,23 @@
             
             <ul class="flex flex-col mt-4 space-y-2 overflow-y-auto" style="height:400px">
                 
-                <li class="flex flex-row items-center relative bg-gray-200 hover:bg-gray-100 p-2 rounded">
-                    <div class="absolute flex items-center justify-center h-full right-0 top-0 mr-2">
-                        <span class="flex items-center justify-center shadow bg-blue-600 h-6 w-12 text-xs text-white">Unread</span>
-                    </div>
-                    
-                    <div class="flex flex-col ml-4">
-                        <h3 class="font-bold">Zac Wayne</h3>
-                        <p class="text-sm text-gray-600">Hey, how are you today?</p>
-                    </div>
-                </li>
-                <li class="flex flex-row items-center relative hover:bg-gray-100 p-2 rounded">
-                    <div class="flex flex-col ml-4">
-                        <h3 class="font-bold">Amina Mkalcha</h3>
-                        <p class="text-sm text-gray-600">Wach omri cava?</p>
-                    </div>
-                </li>
-                
-                <li class="flex flex-row items-center relative hover:bg-gray-100 p-2 rounded">
-                    
-                    <div class="flex flex-col ml-4">
-                        <h3 class="font-bold">Hamid Imad</h3>
-                        <p class="text-sm text-gray-600">Tessema fiha</p>
-                    </div>
-                </li>
+                @foreach ($messages as $message)
+                    <a href="/view/{{ $message->id }}">
+                        <li class="flex flex-row items-center relative @if (!$message->readDate) bg-gray-200 @endif hover:bg-gray-100 p-2 rounded">
+                            @if (!$message->readDate)
+                                <div class="absolute flex items-center justify-center h-full right-0 top-0 mr-2">
+                                    <span class="flex items-center justify-center shadow bg-blue-600 h-6 w-12 text-xs text-white">Unread</span>
+                                </div>
+                            @endif
+                            
+                            <div class="flex flex-col ml-4">
+                                <h3 class="font-bold">{{$message->subject}}</h3>
+                                <p class="text-sm text-gray-600">{{$message->body}}</p>
+                            </div>
+                        </li>
+                    </a>
+                @endforeach
+
             </ul>
             
         </div>
