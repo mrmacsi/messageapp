@@ -48,31 +48,17 @@
                     
                     <li class="flex flex-row items-center relative bg-gray-200 hover:bg-gray-100 p-2 rounded">
                         <div class="absolute flex items-center justify-center h-full right-0 top-0 mr-2">
-                            <span class="flex items-center justify-center shadow bg-blue-600 h-6 w-6 text-xs rounded-full text-white">4</span>
+                            <span class="flex items-center justify-center shadow bg-blue-600 h-6 w-12 text-xs text-white">Unread</span>
                         </div>
-                        <div class="relative flex-shrink-0">
-                            <span class="absolute right-0 top-0 border-2 border-white mt-px mr-px flex items-center justify-center h-4 w-4 rounded-full bg-green-500"></span>
-                            <a href="#" class="flex rounded-full w-16 h-16">
-                                <img src="https://images.unsplash.com/photo-1568967729548-e3dbad3d37e0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;w=128&amp;h=128&amp;q=60&amp;facepad=1.5" alt="" class="w-full h-full rounded-full">
-                            </a>
-                        </div>
+                        
                         <div class="flex flex-col ml-4">
                             <h3 class="font-bold">Zac Wayne</h3>
                             <p class="text-sm text-gray-600">Hey, how are you today?</p>
                         </div>
                     </li>
                     <li class="flex flex-row items-center relative hover:bg-gray-100 p-2 rounded">
-                        <div class="absolute flex items-center flex-row space-x-1 right-0 top-0 mr-2 h-full">
-                            <span class="block rounded-full h-2 w-2 bg-gray-300"></span>
-                            <span class="block rounded-full h-2 w-2 bg-gray-400"></span>
-                            <span class="block rounded-full h-2 w-2 bg-gray-500"></span>
-                        </div>
-                        <div class="relative flex-shrink-0">
-                            <span class="absolute right-0 top-0 border-2 border-white mt-px mr-px flex items-center justify-center h-4 w-4 rounded-full bg-green-500"></span>
-                            <a href="#" class="flex rounded-full w-16 h-16">
-                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;w=128&amp;h=128&amp;q=60&amp;facepad=1.5" alt="" class="w-full h-full rounded-full">
-                            </a>
-                        </div>
+                        
+                        
                         <div class="flex flex-col ml-4">
                             <h3 class="font-bold">Amina Mkalcha</h3>
                             <p class="text-sm text-gray-600">Wach omri cava?</p>
@@ -80,12 +66,7 @@
                     </li>
                     
                     <li class="flex flex-row items-center relative hover:bg-gray-100 p-2 rounded">
-                        <div class="relative flex-shrink-0">
-                            <span class="absolute right-0 top-0 border-2 border-white mt-px mr-px flex items-center justify-center h-4 w-4 rounded-full bg-green-500"></span>
-                            <a href="#" class="flex rounded-full w-16 h-16">
-                                <img src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;w=128&amp;h=128&amp;q=60&amp;facepad=1.5" alt="" class="w-full h-full rounded-full">
-                            </a>
-                        </div>
+                        
                         <div class="flex flex-col ml-4">
                             <h3 class="font-bold">Hamid Imad</h3>
                             <p class="text-sm text-gray-600">Tessema fiha</p>
