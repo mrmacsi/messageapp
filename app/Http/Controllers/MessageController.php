@@ -28,7 +28,8 @@ class MessageController extends Controller
 
     public function list()
     {
-        $messages = Message::all();
+        $messages = Message::latest('id')
+        ->paginate(5);
         return view('list', [ 'messages'=>$messages ]);
     }
 
