@@ -30,8 +30,8 @@
                             </div>
 
                             <div class="flex flex-col ml-4">
-                                <h3 class="font-bold">{{$message->subject}}</h3>
-                                <p class="text-sm text-gray-600">{{$message->body}}</p>
+                                <h3 class="font-bold"> {{ \Illuminate\Support\Str::limit($message->subject, $limit = 50, $end = '...') }} </h3>
+                                <p class="text-sm text-gray-600">{{ \Illuminate\Support\Str::limit($message->body, $limit = 50, $end = '...') }}</p>
                             </div>
                         </li>
                     </a>

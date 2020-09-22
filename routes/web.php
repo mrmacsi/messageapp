@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/create-new', [MessageController::class, 'create']);
-Route::post('/create-new', [MessageController::class, 'createProcess']);
+Route::post('/create-new', [MessageController::class, 'createProcess'])->name('message.store');
 Route::get('/', [MessageController::class, 'list']);
 Route::get('/view/{id}', [MessageController::class, 'view']);
 Route::put('/archive/{id}', [MessageController::class, 'archive']);

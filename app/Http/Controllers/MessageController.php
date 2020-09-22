@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class MessageController extends Controller
 {
@@ -31,12 +32,30 @@ class MessageController extends Controller
         return view('list', [ 'messages'=>$messages ]);
     }
 
-    public function create(Request $request)
+    public function create()
     {
-        $this->validate($request, [
-            'subject'=>'required',
-            'body' => 'required'
-         ]);
         return view('create');
     }
+
+    public function createProcess(Request $request)
+    {
+        $input = $request->all();
+
+        $validator = Validator::make($input, [
+            'subject'=>'required|max:255',
+            'body' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()
+                    ->back()
+                    ->withErrors($validator)
+                    ->withInput();
+        }
+
+        Message::create($input);
+
+        return redirect('/')->with('success','Message Created Successfully');
+    }
+
 }

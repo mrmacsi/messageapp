@@ -13,7 +13,7 @@
                 </div>
                 
                 <div class="mt-2">
-                    <label class="block text-sm text-gray-600" for="content">Content</label>
+                    <label class="block text-sm text-gray-600" for="body">Content</label>
                     <p>{{ $message->body }}</p>
                 </div>
 
