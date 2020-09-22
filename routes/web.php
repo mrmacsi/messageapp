@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/create-new', function () {
     return view('create');
 });
+
+Route::get('/view', function () {
+    return view('view');
+});
