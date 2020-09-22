@@ -6,7 +6,7 @@
 
         <title>Messages</title>
 
-        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <link href="/tailwind.min.css" rel="stylesheet">
     </head>
     <body>
         <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
@@ -20,12 +20,12 @@
             </div>
             <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
               <div class="text-sm lg:flex-grow">
-                <a href="/messages" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
                   Show All Messages
                 </a>
               </div>
               <div>
-                <a href="/new-message" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
+                <a href="/create-new" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
                     Create New Message
                 </a>
               </div>

@@ -18,12 +18,17 @@
                 @foreach ($messages as $message)
                     <a href="/view/{{ $message->id }}">
                         <li class="flex flex-row items-center relative @if (!$message->readDate) bg-gray-200 @endif hover:bg-gray-100 p-2 rounded">
-                            @if (!$message->readDate)
-                                <div class="absolute flex items-center justify-center h-full right-0 top-0 mr-2">
+                            <div class="absolute flex items-center justify-center h-full right-0 top-0 mr-2">
+                                @if (!$message->readDate)
                                     <span class="flex items-center justify-center shadow bg-blue-600 h-6 w-12 text-xs text-white">Unread</span>
-                                </div>
-                            @endif
-                            
+                                @else($message->readDate)
+                                    <span class="flex items-center justify-center shadow bg-green-600 h-6 w-12 text-xs text-white">Read</span>
+                                @endif
+                                @if($message->archivedDate)
+                                    <span class="flex items-center justify-center shadow bg-orange-600 h-6 w-12 text-xs text-white">Archived</span>
+                                @endif
+                            </div>
+
                             <div class="flex flex-col ml-4">
                                 <h3 class="font-bold">{{$message->subject}}</h3>
                                 <p class="text-sm text-gray-600">{{$message->body}}</p>
